@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+        
+      
+  }
+  .local
+  {
+    width: 80%;
+        border: 0px solid whitesmoke;
+        
+        padding-left: 135px;
+        
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: darkgreen;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+    background-color: #eeeee4;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    background-color: grey;
+  }
+
+.navbar
+{
+    background-color:#eeeee4;
+    border-bottom: 1px solid darkgreen;  
+}
