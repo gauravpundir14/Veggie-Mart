@@ -183,11 +183,13 @@ body {
   margin-left:30px;
   margin-right:30px; 
   background-color: darkgreen;
-  padding: 10px;
+  padding: 30px;
   color: white;
   text-align: right;
 }
 .footer-columns {
+  margin-left: 10px;
+  margin-right: 1opx;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
