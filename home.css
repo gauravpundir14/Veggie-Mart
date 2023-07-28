@@ -56,6 +56,129 @@ body {
     background-color:#eeeee4;
     border-bottom: 1px solid darkgreen;  
 }
+
+.img-slider img {
+  height: 720px;
+  width: 1080px;
+  }
+  @keyframes slide {
+  0% {
+    left: 0px;
+  }
+  15% {
+    left: 0px;
+  }
+  20% {
+    left: -1080px;
+  }
+  32% {
+    left: -1080px;
+  }
+  35% {
+    left: -2160px;
+  }
+  47% {
+    left: -2160px;
+  }
+  50% {
+    left: -3240px;
+  }
+  63% {
+    left: -3240px;
+  }
+  66% {
+    left: -4320px;
+  }
+  79% {
+    left: -4320px;
+  }
+  82% {
+    left: -5400px;
+  }
+  100% {
+    left: 0px;
+  }
+  }
+  .img-slider {
+  display: flex;
+  float: left;
+  position: relative;
+  width: 100px;
+  height: 720px;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-duration: 2s;
+  }
+  
+  .heading1 {
+  opacity: 0;
+  }
+  .search {
+  display: flex;
+  position: relative;
+  }
+  .section1 {
+  width: 1080px;
+  overflow: hidden;
+  
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  }
+  .section2 .container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  }
+  .section2 .container .items {
+  margin: 10px;
+  width: 210px;
+  height: 300px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 12px;
+  }
+  .section2 .container .items .name {
+  text-align: center;
+  background-color: rgb(240, 197, 6);
+  height: 25px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+  }
+  .section2 .container .items .price {
+  float: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-weight: 650;
+  }
+  .section2 .container .items .info {
+  padding-left: 10px;
+  color: rgb(243, 168, 7);
+  }
+  .section2 .container .items .img img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+  }
+  .section2 .container .items .img {
+   overflow: hidden; 
+  margin: 0; 
+  }
+  .section2 .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+  }
 .footer {
   margin-left:30px;
   margin-right:30px; 
@@ -107,3 +230,4 @@ body {
   background-color: #eeeee4;
   color: green;
 }
+
