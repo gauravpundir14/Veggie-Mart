@@ -185,23 +185,29 @@
 
   <script>
     function sendMessage() {
-        const userMessage = document.getElementById('user-input').value.trim();
-        if (userMessage === '') return;
-    
-        const chatContainer = document.querySelector('.chat-container');
-        const userBubble = document.createElement('div');
-        userBubble.className = 'chat-bubble user-bubble';
-        userBubble.textContent = userMessage;
-    
-        chatContainer.appendChild(userBubble);
-    
+    const userMessage = document.getElementById('user-input').value.trim();
+    if (userMessage === '') return;
+
+    const chatContainer = document.querySelector('.chat-container');
+    const userBubble = document.createElement('div');
+    userBubble.className = 'chat-bubble user-bubble';
+    userBubble.textContent = userMessage;
+
+    chatContainer.appendChild(userBubble);
+
+    let botReply = '';
+
+    // Check user's message and prepare bot's reply
+    if (userMessage.toLowerCase() === 'hi') {
+        botReply = 'Hello!';
+    } else {
         // Send user message to the server
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'chatbot-backend.php', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                const botReply = JSON.parse(xhr.responseText).reply;
+                botReply = JSON.parse(xhr.responseText).reply;
                 const botBubble = document.createElement('div');
                 botBubble.className = 'chat-bubble bot-bubble';
                 botBubble.textContent = botReply;
@@ -209,9 +215,19 @@
             }
         };
         xhr.send(`userMessage=${encodeURIComponent(userMessage)}`);
-    
-        document.getElementById('user-input').value = '';
     }
+
+    // Display bot's reply if it's not an empty string
+    if (botReply !== '') {
+        const botBubble = document.createElement('div');
+        botBubble.className = 'chat-bubble bot-bubble';
+        botBubble.textContent = botReply;
+        chatContainer.appendChild(botBubble);
+    }
+
+    document.getElementById('user-input').value = '';
+}
+
     </script>
     
   <br>
