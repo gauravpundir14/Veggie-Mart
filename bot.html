@@ -201,21 +201,44 @@
     if (userMessage.toLowerCase() === 'hi') {
         botReply = 'Hello!';
     } else if (userMessage.toLowerCase().includes('predict the price of onion for next week')) {
-        botReply = 'The predicted price of onion for next week is 40 rupee/kg.';
+        botReply = 'The predicted price of onion for next week is 40 ₹/kg.';
     } else if (userMessage.toLowerCase().includes('predict the price of tomato for next week')) {
-        botReply = 'The predicted price of tomato for next week is 70 rupee/kg.';
+        botReply = 'The predicted price of tomato for next week is 70 ₹/kg.';
     } else if (userMessage.toLowerCase().includes('predict the price of potato for next week')) {
-        botReply = 'The predicted price of potato for next week is 60 rupee/1.5kg.';
+        botReply = 'The predicted price of potato for next week is 60 ₹/1.5kg.';
     } else if (userMessage.toLowerCase().includes('predict the price of gourd for next week')) {
-        botReply = 'The predicted price of gourd for next week is 30 rupee/kg.';
+        botReply = 'The predicted price of gourd for next week is 30 ₹/kg.';
     } else if (userMessage.toLowerCase() === 'hello') {
         botReply = 'Hi!';
-    } else if (userMessage.toLowerCase() === 'i have a complaint') {
+    } else if (userMessage.toLowerCase().includes('i have a complaint') || userMessage.toLowerCase().includes('i have a query')) {
         botReply = 'Please contact veggiemart@bus.com for any queries or complaints.';
-    } else if (userMessage.toLowerCase() === 'i have feedback') {
-        botReply = 'All feedback is appreciated.';
-    } else if (userMessage.toLowerCase() === 'i want an order summary') {
-        botReply = 'Your order summary and details can be found in the order history.';
+    } else if (userMessage.toLowerCase().includes('i have a question')) {
+        botReply = 'Please feel free to ask any question. I will surely help you out.';
+    } else if (userMessage.toLowerCase().includes('i want to return a order')) {
+        botReply = 'For any queries related to order returns, please contact veggiemart@bus.com.';
+    } else if (userMessage.toLowerCase().includes('predict the price of all vegetables for next week')) {
+        botReply = 'Prediction is based on database provided. Prices for next week:\n' +
+            'Onion - 40 ₹/kg\n' +
+            'Aloo - 12 ₹/kg\n' +
+            'Lady Finger - 40 ₹/kg\n' +
+            'Tomato - 80 ₹/kg\n' +
+            'Beans - 100 ₹/kg\n' +
+            'Gourd - 40 ₹/kg\n' +
+            'Ginger - 240 ₹/kg\n' +
+            'Pumpkin - 50 ₹/kg\n' +
+            'Cucumber - 40 ₹/kg\n' +
+            'Peas - 200 ₹/kg\n' +
+            'Cauliflower - 80 ₹/kg\n' +
+            'Lettuce - 80 ₹/kg\n' +
+            'Green Onion - 160 ₹/kg\n' +
+            'Bell Pepper - 160 ₹/kg\n' +
+            'Spinach - 80 ₹/kg\n' +
+            'Lemon - 200 ₹/kg\n' +
+            'Carrot - 80 ₹/kg\n' +
+            'Coriander - 100 ₹/kg\n' +
+            'Mushroom - 250 ₹/kg\n' +
+            'Chilli - 80 ₹/kg\n' +
+            'Bitter Gourd - 160 ₹/kg';
     } else {
         // Send user message to the server
         const xhr = new XMLHttpRequest();
@@ -243,6 +266,7 @@
 
     document.getElementById('user-input').value = '';
 }
+
 
 
     </script>
