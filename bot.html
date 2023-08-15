@@ -184,7 +184,7 @@
   </div>
 
   <script>
-    function sendMessage() {
+  function sendMessage() {
     const userMessage = document.getElementById('user-input').value.trim();
     if (userMessage === '') return;
 
@@ -200,6 +200,22 @@
     // Check user's message and prepare bot's reply
     if (userMessage.toLowerCase() === 'hi') {
         botReply = 'Hello!';
+    } else if (userMessage.toLowerCase().includes('predict the price of onion for next week')) {
+        botReply = 'The predicted price of onion for next week is 40 rupee/kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of tomato for next week')) {
+        botReply = 'The predicted price of tomato for next week is 70 rupee/kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of potato for next week')) {
+        botReply = 'The predicted price of potato for next week is 60 rupee/1.5kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of gourd for next week')) {
+        botReply = 'The predicted price of gourd for next week is 30 rupee/kg.';
+    } else if (userMessage.toLowerCase() === 'hello') {
+        botReply = 'Hi!';
+    } else if (userMessage.toLowerCase() === 'i have a complaint') {
+        botReply = 'Please contact veggiemart@bus.com for any queries or complaints.';
+    } else if (userMessage.toLowerCase() === 'i have feedback') {
+        botReply = 'All feedback is appreciated.';
+    } else if (userMessage.toLowerCase() === 'i want an order summary') {
+        botReply = 'Your order summary and details can be found in the order history.';
     } else {
         // Send user message to the server
         const xhr = new XMLHttpRequest();
@@ -227,6 +243,7 @@
 
     document.getElementById('user-input').value = '';
 }
+
 
     </script>
     
