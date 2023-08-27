@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js" defer></script>
+    <!-- <style>
+    p{
+        color : blue;
+    } -->
+<!-- </style> -->
+</head>
+<body class="">
+    
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <img src="https://static.vecteezy.com/system/resources/previews/004/999/463/original/shopping-cart-icon-illustration-free-vector.jpg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <button id="payment" type="submit">Proceed To Pay</button>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    
+<footer class="footer">
+    <div class="footer-columns">
+        <div class="footer-column">
+          <h3>STORE</h3>
+          <p>
+          Shop all
+          </p>
+          <p>
+            Shipping/returns 
+          </p>
+          <p>
+            Store policy
+          </p>
+          <p>
+            FAQ
+          </p>
+        </div>
+        <div class="footer-column">
+            <h3>Address</h3>
+            <p>Veggie Mart<br><br>
+              Post Office Rd, Clement Town, Dehradun, <br><br>Bharu Wala Grant, Uttarakhand 248001</p>
+        </div>
+        <div class="footer-column">
+            <h3>Opening Hours</h3>
+            <p>Mon - Fri: 8am - 8pm</p>
+            <p>Sat - Sun: 9am - 6pm</p>
+        </div>
+        <div class="footer-column">
+          <h3>GET IT FRESH</h3>
+          <div>
+            <p>Email.</p>
+            <input type="email" placeholder="Your email id here" />
+            <button>Subscribe</button>
+          </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <center>
+    <p >&copy; 2023 Vegetable Mart. All rights reserved.</p>
+    </center>
+  </div>
+
+   
+    <script>
+        document.getElementById("payment").addEventListener("click", function() {
+            // Redirect to another HTML file when the button is clicked
+            window.location.href = "adress.html";
+        });
+        </script>
+    
+</body>
+</html>
