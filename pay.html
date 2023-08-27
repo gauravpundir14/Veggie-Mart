@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pay.css">
+  <script src="pay.js" defer></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Beautiful Payment Gateway</title>
+</head>
+<body>
+  <div class="payment-container">
+    <header>
+      <img src="https://img.favpng.com/6/24/2/payment-computer-icons-money-logo-png-favpng-mb8H8Lt49yNLgQG8QZhQ6SNRv.jpg" alt="Amazon Logo">
+    </header>
+    <div class="payment-content">
+      <div class="payment-methods">
+        <h2>Select Payment Method</h2>
+        <div class="payment-method">
+
+          <img src="https://cdn-icons-png.flaticon.com/512/6491/6491490.png" alt="Cash On Delivery">
+          <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash">
+          <label for="cashOnDelivery">Cash on Delivery</label>
+        </div>
+        <div class="payment-method">
+
+          <img src="https://pixlok.com/wp-content/uploads/2021/02/Paytm-Svg-Logo.jpg" alt="Paytm">
+
+          <input type="radio" id="paytm" name="paymentMethod" value="paytm">
+          <label for="paytm">Paytm</label>
+        </div>
+        <div class="payment-method">
+
+          <img src="https://static.vecteezy.com/system/resources/previews/009/911/500/original/google-pay-editorial-logo-digital-payment-app-free-vector.jpg" alt="Google Pay">
+
+          <input type="radio" id="gpay" name="paymentMethod" value="gpay">
+          <label for="gpay">Google Pay</label>
+        </div>
+        <div class="payment-method">
+
+          <img src="https://i.pinimg.com/736x/94/8e/3a/948e3adaddb478e84b342e6619ca00be.jpg" alt="Credit/Debit Card">
+          <input type="radio" id="card" name="paymentMethod" value="card">
+          <label for="card">Credit/Debit Card</label>
+        </div>
+      </div>
+      <div class="payment-details">
+        <h2>Payment Details</h2>
+        <div class="card-details" id="cardDetails">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" placeholder="Enter card number">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="text" id="expiryDate" placeholder="MM/YY">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="CVV">
+        </div>
+        <div class="upi-details" id="upiDetails">
+          <label for="upiPin">UPI PIN</label>
+          <input type="password" id="upiPin" placeholder="Enter UPI PIN">
+        </div>
+          <button id="confirmPayment" class="payment-button">Confirm Payment</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
