@@ -1,0 +1,37 @@
+when i say  hi it says hello
+when i say predict the price of onion for next week it says 40 rupee/kg
+when i say predict the price of tomato for next week it says 70 rupee/kg
+when i say predict the price of potato for next week it says 60 rupee/1.5kg
+when i say predict the price of groud for next week it says 30 rupee/kg
+when i say hello  it says hi
+when i say hi replies hi it says hello 
+when i say i have a complain   it says please contact to veggiemart@bus.com for any query or complain
+when i say i have feed it say all feedback are appreciate 
+when i say i want a order summary it say order summary and details can be find in order history
+
+when i say i have a complain   it says please contact to veggiemart@bus.com for any query or complain
+when i say i have a query   it says please contact to veggiemart@bus.com for any query or complain
+when i say i have a question   it says please feel to ask any question, I will surely help you out
+when i say i want to return a order it says for any query related to order feel free to contact veggiemart@bus.com
+when i say predict the price of all vegetables for next week it says prediction is based on database provides  prices will be as 
+Onion - 40 ₹/kg
+Aloo - 12 ₹/kg 
+Lady Finger - 40 ₹/kg 
+Tomato _ 80 ₹/kg 
+Beans _ 100 ₹/kg 
+Gourd-40 ₹/kg
+Ginger-240 ₹/kg
+Pumkin-50 ₹/kg
+Cucumber-40 ₹/kg
+Peas-200 ₹/kg
+Cauliflower-80 ₹/kg
+Lettuce-80 ₹/kg
+Green Onion-160 ₹/kg
+Bell Pepper -160 ₹/kg
+Spinach-80 ₹/kg
+Lemon-200  ₹/kg
+Carrot-80 ₹/kg
+Coriander-100 ₹/kg
+Mushroom -250 ₹/kg
+Chilli - 80 ₹/kg
+Bitter gourd-160 ₹/kg
