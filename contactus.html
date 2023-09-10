@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="contactus.css"> 
+</head>
+<body>
+    <script src="contactus.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("xKMUrbHZdl7rPe0ZZ");
+   })();
+</script>
+    <nav class="navbar ">
+        <div class="container">
+          <h1 class="logo">Veggie Mart</h1>
+          <ul class="menu">
+            <input type="text" placeholder="Search..">
+            <li><i class="fa fa-search"></i></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="loginSignUp.html">Login</a></li>
+            <li><a href="bot.html">Assistant</a></li>
+          </ul>
+          </div>
+      </nav>
+    <center>
+    <h1> CONTACT US</h1> 
+    <hr>
+    <br><center>
+<b>
+    <p>
+    At Veggie Mart, we are committed to providing you with the freshest and finest </p>
+    <p>selection of vegetables. If you have any questions, feedback, or inquiries, please don't </p>
+   <p>hesitate to get in touch with us. We're here to assist you!
+  </p>
+</b>
+</center>
+<hr>
+   <pre>Name*</pre> 
+    <input type="text" id="namee"style="width:500px;">
+    <br>
+   <pre>Email*</pre>
+    <input type="text" id="email"style="width: 500px;">
+    <br>
+   <pre> message*</pre>
+   <input type="text" id="message" style="height: 200px; width: 500px;">
+   <br>
+   <br>
+   <button type="submit" onclick="sendMail()">
+    <img src="send.png" style="width: 48px;" alt="buttonpng"  />
+  </button>
+<center>
+    <br>
+    <br>
+    <hr>
+    <secton id="w">
+  <div class="box" id="b1">
+    <center>
+        <h3>Contact</h3>
+        <p>Tel:123456789</p>
+        <p>Email:Info@veggimart.com
+        </p>
+        <pre>
+
+        </pre>
+     <p></p>
+    </center>
+  </div>
+  <div class="box" id="b2">
+    <center>
+        <h3>Address</h3>
+        <p>Veggie Mart<br><br>
+         Post Office Rd, Clement Town, Dehradun, <br><br>Bharu Wala Grant, Uttarakhand 248001</p>
+    <p></p>
+  </center>
+  </div>
+  <div class="box">
+    <center>
+        <h3>Opening Hours</h3>
+        <p>Mon - Fri: 8am - 8pm</p>
+        <p>Sat - Sun: 9am - 6pm</p>
+    <p></p>
+  </center>
+  </div>
+  </secton>
+  </center>
+  <hr>
+  <br>
+   <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27563.673888446207!2d77.96281037431638!3d30.28098539999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092b538e2e1eaf%3A0xa83765bdb44e2b31!2sVegetable%20Shop!5e0!3m2!1sen!2sin!4v1692200859483!5m2!1sen!2sin" width="1375" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+   <hr>
+   <footer class="footer">
+    <div class="footer-columns">
+        <div class="footer-column">
+          <h3>STORE</h3>
+          <p>
+          Shop all
+          </p>
+          <p>
+            Shipping/returns 
+          </p>
+          <p>
+            Store policy
+          </p>
+          <p>
+            FAQ
+          </p>
+        </div>
+        <div class="footer-column">
+            <h3>Address</h3>
+           <p>Veggie mart<br><br>
+            Post Office Rd, Clement Town, Dehradun, <br><br>Bharu Wala Grant, Uttarakhand 248001</p>
+        </div>
+        <div class="footer-column">
+            <h3>Opening Hours</h3>
+            <p>Mon - Fri: 8am - 8pm</p>
+            <p>Sat - Sun: 9am - 6pm</p>
+        </div>
+        <div class="footer-column">
+          <h3>GET IT FRESH</h3>
+          <div>
+            <p>Email.</p>
+            <input type="email" placeholder="Your email id here" />
+            <button>Subscribe</button>
+          </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <center>
+    <p >&copy; 2023 Vegetable Mart. All rights reserved.</p>
+    </center>
+  </div>
+  
+</body>
+</html>

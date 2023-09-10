@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eeeee4;
+      min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+    }
+
+    .chat-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-bubble {
+      background-color: darkgreen;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .user-bubble {
+      background-color: #5aa469;
+    }
+
+    .bot-bubble {
+      background-color: darkgreen;
+    }
+
+    .chat-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .send-btn {
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: darkgreen;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .send-btn:hover {
+      background-color: darkgreen;
+    }
+    .navbar
+{
+    background-color:#eeeee4;
+    border-bottom: 1px solid darkgreen;  
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: darkgreen;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+    background-color: #eeeee4;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    background-color: grey;
+  }
+  .footer {
+  margin-left:30px;
+  margin-right:30px; 
+  background-color: darkgreen;
+  padding: 30px;
+  color: white;
+  text-align: right;
+}
+.footer-columns {
+  margin-left: 10px;
+  margin-right: 1opx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-column {
+  flex-basis: 23%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.footer h3 {
+  color: white;
+}
+
+  main {
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+  }
+  </style>
+</head>
+<body>
+    <nav class="navbar ">
+        <div class="container">
+          <h1 class="logo">Veggie Mart</h1>
+          <ul class="menu">
+            <input type="text" placeholder="Search..">
+            <li><i class="fa fa-search"></i></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="loginSignUp.html">Login</a></li>
+            <li><a href="bot.html">Assistant</a></li>
+          </ul>
+          </div>
+      </nav>
+      <br>
+      <br>
+  <div class="chat-container">
+    <div class="chat-bubble bot-bubble">Hello! How can I assist you today?</div>
+    <input type="text" class="chat-input" id="user-input" placeholder="Type your message...">
+    <button class="send-btn" onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+  function sendMessage() {
+    const userMessage = document.getElementById('user-input').value.trim();
+    if (userMessage === '') return;
+
+    const chatContainer = document.querySelector('.chat-container');
+    const userBubble = document.createElement('div');
+    userBubble.className = 'chat-bubble user-bubble';
+    userBubble.textContent = userMessage;
+
+    chatContainer.appendChild(userBubble);
+
+    let botReply = '';
+
+    // Check user's message and prepare bot's reply
+    if (userMessage.toLowerCase() === 'hi') {
+        botReply = 'Hello!';
+    } else if (userMessage.toLowerCase().includes('predict the price of onion for next week')) {
+        botReply = 'The predicted price of onion for next week is 40 ₹/kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of tomato for next week')) {
+        botReply = 'The predicted price of tomato for next week is 70 ₹/kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of potato for next week')) {
+        botReply = 'The predicted price of potato for next week is 60 ₹/1.5kg.';
+    } else if (userMessage.toLowerCase().includes('predict the price of gourd for next week')) {
+        botReply = 'The predicted price of gourd for next week is 30 ₹/kg.';
+    } else if (userMessage.toLowerCase() === 'hello') {
+        botReply = 'Hi!';
+    } else if (userMessage.toLowerCase().includes('i have a complaint') || userMessage.toLowerCase().includes('i have a query')) {
+        botReply = 'Please contact veggiemart@bus.com for any queries or complaints.';
+    } else if (userMessage.toLowerCase().includes('i have a question')) {
+        botReply = 'Please feel free to ask any question. I will surely help you out.';
+    } else if (userMessage.toLowerCase().includes('i want to return a order')) {
+        botReply = 'For any queries related to order returns, please contact veggiemart@bus.com.';
+    } else if (userMessage.toLowerCase().includes('predict the price of all vegetables for next week')) {
+        botReply = 'Prediction is based on database provided. Prices for next week:\n' +
+            'Onion - 40 ₹/kg\n' +
+            'Aloo - 12 ₹/kg\n' +
+            'Lady Finger - 40 ₹/kg\n' +
+            'Tomato - 80 ₹/kg\n' +
+            'Beans - 100 ₹/kg\n' +
+            'Gourd - 40 ₹/kg\n' +
+            'Ginger - 240 ₹/kg\n' +
+            'Pumpkin - 50 ₹/kg\n' +
+            'Cucumber - 40 ₹/kg\n' +
+            'Peas - 200 ₹/kg\n' +
+            'Cauliflower - 80 ₹/kg\n' +
+            'Lettuce - 80 ₹/kg\n' +
+            'Green Onion - 160 ₹/kg\n' +
+            'Bell Pepper - 160 ₹/kg\n' +
+            'Spinach - 80 ₹/kg\n' +
+            'Lemon - 200 ₹/kg\n' +
+            'Carrot - 80 ₹/kg\n' +
+            'Coriander - 100 ₹/kg\n' +
+            'Mushroom - 250 ₹/kg\n' +
+            'Chilli - 80 ₹/kg\n' +
+            'Bitter Gourd - 160 ₹/kg';
+    } else {
+        // Send user message to the server
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'chatbot-backend.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                botReply = JSON.parse(xhr.responseText).reply;
+                const botBubble = document.createElement('div');
+                botBubble.className = 'chat-bubble bot-bubble';
+                botBubble.textContent = botReply;
+                chatContainer.appendChild(botBubble);
+            }
+        };
+        xhr.send(`userMessage=${encodeURIComponent(userMessage)}`);
+    }
+
+    // Display bot's reply if it's not an empty string
+    if (botReply !== '') {
+        const botBubble = document.createElement('div');
+        botBubble.className = 'chat-bubble bot-bubble';
+        botBubble.textContent = botReply;
+        chatContainer.appendChild(botBubble);
+    }
+
+    document.getElementById('user-input').value = '';
+}
+
+
+
+    </script>
+    
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+<footer class="footer">
+  <div class="footer-columns">
+      <div class="footer-column">
+        <h3>STORE</h3>
+        <p>
+        Shop all
+        </p>
+        <p>
+          Shipping/returns 
+        </p>
+        <p>
+          Store policy
+        </p>
+        <p>
+          FAQ
+        </p>
+      </div>
+      <div class="footer-column">
+          <h3>Address</h3>
+          <p>Veggie Martp<br><br>
+            Post Office Rd, Clement Town, Dehradun, <br><br>Bharu Wala Grant, Uttarakhand 248001</p>
+      </div>
+      <div class="footer-column">
+          <h3>Opening Hours</h3>
+          <p>Mon - Fri: 8am - 8pm</p>
+          <p>Sat - Sun: 9am - 6pm</p>
+      </div>
+      <div class="footer-column">
+        <h3>GET IT FRESH</h3>
+        <div>
+          <p>Email.</p>
+          <input type="email" placeholder="Your email id here" />
+          <button>Subscribe</button>
+        </div>
+  </div>
+</footer>
+<div class="copyright">
+  <center>
+  <p >&copy; 2023 Vegetable Mart. All rights reserved.</p>
+  </center>
+</div>
+</body>
+</html>

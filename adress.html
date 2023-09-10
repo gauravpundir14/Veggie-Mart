@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="adress.css">
+  <script src="adress.js" defer></script>
+  <title>Payment Pathway</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn2.vectorstock.com/i/1000x1000/37/81/payment-icon-vector-5783781.jpg" alt="Payment Logo">
+      <h1>Payment Service</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Select a Delivery Address</h1>
+    <img src= "address.png" alt="lgado pic" align="right">
+
+    <form id="paymentForm">
+        <div class="input-group">
+            <label for="country">Country or Region:</label>
+            <select id="country" required>
+              <option value="" disabled selected>Select Country or Region</option>
+              <option value="uk">India</option>
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <!-- Add more country options here -->
+            </select>
+          </div>
+        <div class="input-group">
+            <label for="fullName">Full name (First and Last name)</label>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="tel" id="mobileNumber" placeholder="Valid Mobile Number" required>
+        </div>
+        <div class="input-group">
+            <label for="pinCode">Pin Code</label>
+            <input type="text" id="pinCode" placeholder="Pincode" required>
+        </div>
+        <div class="input-group">
+            <label for="houseNo">Flat, House no., Building, Company, Apartment</label>
+            <input type="text" id="houseNo" required>
+        </div>
+        <div class="input-group">
+            <label for="area">Area, Street, Sector, Village</label>
+            <input type="text" id="area" required>
+        </div>
+        <div class="input-group">
+            <label for="landmark">Landmark</label>
+            <input type="text" id="landmark" required>
+        </div>
+        <div class="input-group">
+            <label for="town">Town/city</label>
+            <input type="text" id="town" placeholder="Town" required>
+        </div>
+        <div class="input-group">
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="State" required>
+        </div>
+        <!-- ... (other HTML code) ... -->
+  <button id="paymentButton" type="submit">Select a Payment Method</button>
+  <!-- ... (other HTML code) ... -->
+  
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("paymentButton").addEventListener("click", function() {
+        // Redirect to another HTML file when the button is clicked
+        window.location.href = "pay.html";
+    });
+    </script>
+</body>
+</html>
