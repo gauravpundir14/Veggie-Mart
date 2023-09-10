@@ -24,7 +24,13 @@ body {
     padding: 20px;
   }
   
+  .container img {
+    height: 70px;
+    width: 100px;
+}
   .logo {
+    flex: 1;
+    /* text-align: left; */
     font-size: 24px;
     color: darkgreen;
   }

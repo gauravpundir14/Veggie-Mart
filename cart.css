@@ -111,7 +111,7 @@ header .shopping span{
   font-weight: bold;
   cursor: pointer;
 }
-.card .checkOut div:nth-child(2){
+.card .checkOut div:nth-child(4){
   background-color: #1C1F25;
   color: #fff;
 }
